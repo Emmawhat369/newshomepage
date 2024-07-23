@@ -1,0 +1,307 @@
+*{
+    font-family: Inter;
+}
+.container {
+    margin: 70px 100px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: .5fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "wallpaper wallpaper news"
+    "heading txt news"
+    "content1 content2 content3";
+    grid-gap: 2rem;
+}
+@media screen and (max-width:750px) {
+    .container {
+        margin: 0px;
+        width: fit-content;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: .5fr 2fr 1fr .8fr 1.2fr .7fr .7fr .7fr ;
+        grid-template-areas: "nav hiddenmenu"
+        "wallpaper hiddenmenu"
+        "heading heading"
+        "txt txt"
+        "news news "
+        "content1 content1"
+        "content2 content2"
+        "content3 content3";
+        grid-gap: 0rem; 
+
+        .hiddenmenu {
+            grid-area: hiddenmenu;
+            width: 30vw;
+            float: right;
+            margin: 0;
+            padding: 0;
+        }
+        .hiddenmenu li {
+            float: left;
+            margin-right: 80px;
+        }
+
+        .hiddenmenu button {
+            background-color: transparent;
+            border: none;
+            margin: 20px 0px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .nav {
+            margin: 40px 0px;
+        }
+        #menubtn {
+            display: block;
+            scale: 1.5;
+        }
+        .navbtn {
+            display: none
+        };
+        .wallpaper {
+            background-image: url(./image-web-3-mobile.jpg);
+            width: 600px; 
+            height: 50vh;
+            background-size: cover;
+            z-index: 0;
+        }
+        .heading {
+            font-size: 38px;
+            padding-right: 200px;
+        }
+        .txt {
+            padding-right: 200px;
+        }
+        .txt p {
+            font-size: 26px;
+            margin: 0;
+        }
+        .txt button{
+            margin: 20px 0px;
+        }
+        .news {
+            margin: 30px 0px;
+            padding: 20px 40px 0px 40px;
+            width: fit-content;
+        }
+        .news h3 {
+            font-size: 26px;
+        }
+        .news h3,
+        p {
+            margin: 15px;
+        }
+        .content1 {
+            margin: 40px 0px;
+            padding-right: 80px;
+        }
+        .content1 h2 {
+            font-size: 46px;
+        }
+        .content1 h3 {
+            font-size: 24px;
+        }
+        .content2 {
+            margin: 40px 0px;
+            padding-right: 80px;
+        }
+        .content2 h2 {
+            font-size: 46px;
+        }
+        .content2 h3 {
+            font-size: 24px;
+        }
+        .content3 {
+            margin: 40px 0px;
+            padding-right: 80px;
+        }
+        .content3 h2 {
+            font-size: 46px;
+        }
+
+        .content3 h3 {
+            font-size: 24px;
+        }
+    }
+}
+
+.hiddenmenu button {
+    background-color: transparent;
+    border: none;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.hiddenmenu {
+    display: none;
+    width: 300px;
+    z-index: 1;
+    grid-area: hiddenmenu;
+    background-color: white;
+}
+.hiddenmenu ul {
+    list-style: none;
+    margin: 20px 10px;
+}
+#closebtn{
+    scale: 1;
+    float: right;
+}
+#menubtn {
+    display: none;
+}
+
+
+
+
+.nav {
+    grid-area: nav;
+}
+.nav button {
+    float: inline-end;
+    margin: 10px 15px;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+}
+.nav button:hover {
+    cursor: pointer;
+    color: #e39c48;
+}
+.wallpaper {
+    grid-area: wallpaper;
+    background-image: url(./image-web-3-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh
+}
+.heading {
+    grid-area: heading;
+    font-size: 36px;
+    color: #010018;
+    padding: 0;
+    margin: 0;
+}
+.txt {
+    grid-area: txt;
+}
+.txt p {
+    font-size: large;
+    margin-top: 65px;
+    color: grey;
+}
+.txt button {
+    border: none;
+    margin-top: 85px;
+    padding: 15px;
+    width: 250px;
+    background-color: #ee5e51;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    cursor: pointer;
+}
+.txt button:hover {
+    cursor: pointer;
+    background-color: #00001a;
+    color: white;
+}
+.news {
+    grid-area: news;
+    background-color: #00001a;
+    padding: 20px 20px 0px 20px;
+    height: 90vh;
+}
+.news h3,p {
+    color: white;
+    margin: 10px;
+}
+.news h3:hover {
+    color: #e39c48;
+    cursor: pointer;
+}
+.news p {
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.news h1 {
+    font-size: 52px;
+    margin: 30px 10px;
+    color:#e39c48;
+}
+#one {
+    margin-bottom: 60px;
+    border-bottom: 1px solid grey;
+}
+#two {
+    margin: 60px 0px;
+}
+#three {
+    margin: 60px 0px;
+    border-bottom: 1px solid grey;
+}
+
+.content1 {
+    grid-area: content1;
+}
+#c1 {
+    float: left;
+    width: 40%;
+    padding-right: 20px;
+}
+.content1 h2 {
+    color: #ea5849;
+    font-size: 32px;
+}
+.content1 h3:hover {
+    color: #ea5849;
+    cursor: pointer;
+}
+.content1 span {
+    color: grey;
+}
+.content2 {
+    grid-area: content2;
+}
+#c2 {
+    float: left;
+    width: 40%;
+    padding-right: 20px;
+}
+.content2 h2 {
+    color: #ea5849;
+    font-size: 32px;
+}
+.content2 h3:hover {
+    color: #ea5849;
+    cursor: pointer;
+}
+.content2 span {
+    color: grey;
+}
+.content3 {
+    grid-area: content3;
+}
+#c3 {
+    float: left;
+    width: 40%;
+    padding-right: 20px;
+}
+.content3 h2 {
+    color: #ea5849;
+    font-size: 32px;
+}
+.content3 h3:hover {
+    color: #ea5849;
+    cursor: pointer;
+}
+.content3 span {
+    color: grey;
+}
